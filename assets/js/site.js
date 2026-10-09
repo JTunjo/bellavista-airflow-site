@@ -15,7 +15,6 @@
     { href: "modelo.html", titulo: "El modelo" },
     { href: "finca.html", titulo: "Para la finca" },
     { href: "proximos-pasos.html", titulo: "Próximos pasos" },
-    { href: "como-se-hizo.html", titulo: "Cómo se hizo" },
   ];
 
   const actual = (location.pathname.split("/").pop() || "index.html");

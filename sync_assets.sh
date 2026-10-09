@@ -11,7 +11,7 @@ B="$HERE/assets/fig/modelo"
 I="$HERE/assets/interactivo"
 
 # Track A: sensores
-for f in external_humidity_halfhour_overlay.png \
+for f in external_humidity_halfhour_overlay.png forced_air_spatial_map.png \
          post_fan_decay_magnitude.png wet_coffee_zone_differential.png \
          wet_coffee_rise_map.png wet_coffee_decay_map.png; do
   cp "$SRC/track_a/$f" "$A/$f"

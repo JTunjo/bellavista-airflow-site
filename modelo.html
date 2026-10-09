@@ -209,10 +209,18 @@
       </table></div>
       <p><b>Verificaciones del solver.</b> Temperatura uniforme → el aire queda quieto. Solo estratificación caliente arriba → sin flujo falso (~10⁻⁹ m/s). Una mitad caliente → una sola celda girando hacia el lado correcto. Masa conservada hasta el redondeo. El flujo se estabiliza en ~5 minutos simulados; la humedad se corre 4 horas. Malla convergida en 512 celdas (1024 cambia las velocidades +2,5 %); a 1024 llega un poco menos humedad al noroeste (20 % contra 23 %), así que la mitad noroeste real probablemente está algo <i>más</i> separada de lo que muestra el modelo.</p>
       <p><b>Por qué se frena.</b> Corridas cruzadas, velocidad media del tercio SE: temperaturas sin café y sin bloque 5,9 cm/s; con el bloque de café 5,2 (−11 %); temperaturas de días de café sin bloque 4,3 (−27 %); ambas 3,7 (−37 %).</p>
-      <p><b>Herramientas.</b> Solver 2D propio en JAX; de AeroJAX solo se usa el modelo de turbulencia. Fuente: <code>docs/track_b_coffee_map_findings.md</code>.</p>
+      <p><b>Herramientas.</b> Solver 2D propio en JAX; de AeroJAX solo se usa el modelo de turbulencia.</p>
       <figure class="fig">
         <div class="fig-frame"><img src="assets/fig/modelo/domain_check.png" alt="Geometría del corte del modelo: camas, aberturas y sensores" loading="lazy"></div>
         <figcaption><span class="mirar">Lo que ve el modelo en el corte del centro.</span>Las tres camas (líneas punteadas), las puertas (azul) y las ventanas (naranja) proyectadas desde las paredes de los lados, y los sensores más cercanos.</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="fig-frame"><img src="assets/fig/modelo/sensitivity_summary.png" alt="Resultado de cambiar cada supuesto del modelo, uno a la vez" loading="lazy"></div>
+        <figcaption>
+          <span class="mirar">Cada fila es un supuesto cambiado; la línea vertical negra es el resultado base.</span>
+          Los cuatro paneles de arriba: dónde se dividen los remolinos (casi no se mueve), cuánto frena el café (varía, pero siempre frena), qué parte de la humedad llega al noroeste en 1 hora (siempre lejos del 50 %) y la velocidad (la más incierta). Abajo, la forma de los remolinos a lo largo de la nave en todas las variantes: casi iguales.
+          <span class="en">Rótulos en inglés: "bed drag" = freno de las camas, "coffee footprint" = área del café, "window exchange" = intercambio por ventanas, "T interp" = cómo se rellenan las temperaturas, "grid" = grilla.</span>
+        </figcaption>
       </figure>
       <div class="tabs" style="margin-top:1.1rem">
         <button aria-controls="m-con" aria-selected="true">Mapa con café</button>

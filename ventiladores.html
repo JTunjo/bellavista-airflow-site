@@ -65,6 +65,14 @@
       <div class="prueba" role="cell"><span class="entrada-m">Fondo · </span><span class="t">Prueba 4 · 9:00</span><span class="sello sello--sinrespaldo">No legible</span><span class="d">Esa mañana el clima cambió muy rápido; la nave entera se movió pareja.</span></div>
     </div>
 
+    <figure class="fig">
+      <div class="fig-frame"><img src="assets/fig/sensores/forced_air_spatial_map.png" alt="Seis mapas de costado, uno por prueba, con el efecto del ventilador en cada sensor" loading="lazy"></div>
+      <figcaption>
+        <span class="mirar">Qué mirar: en las pruebas legibles el color cambia según la distancia a la estrella; en las demás es parejo y aparece atenuado.</span>
+        Cada mapa es una prueba vista de costado (largo × altura); la estrella es el punto de entrada del ventilador y cada punto un sensor. Rojo = más humedad de lo normal, azul = menos. La figura numera desde 0: "Evento 0" = prueba 1, "Evento 5" = prueba 6.
+      </figcaption>
+    </figure>
+
     <ul class="claims">
       <li class="claim">
         <span class="sello sello--solido">Sólido</span>
@@ -130,8 +138,7 @@
       <p><b>Dirección.</b> Prueba 1: la demora del pico crece con la distancia (r = +0,61, p = 0,02), un frente que viaja. Prueba 3: la amplitud cae con la distancia (r = −0,85) pero la demora no (r = −0,07, n.s.), atenuación pareja.</p>
       <p><b>Prueba 4.</b> Esa mañana la humedad de afuera pasó de unos −8 a +19 puntos de anomalía en hora y media, más rápido de lo que la nave podía seguir. Se ve como una anomalía negativa casi igual en todo el volumen, sin relación con la distancia.</p>
       <p><b>Después de apagar (30–90 min).</b> Correlación con la distancia al ventilador frente a la distancia a la ventana más cercana. Prueba 5: ventilador r = +0,41 (p = 0,125, signo opuesto), ventana r = −0,72 (p = 0,003). Pruebas 1 y 3 (día 1): centradas en el ventilador (r = −0,80 y −0,60). Pruebas 4 y 6: ninguna encaja.</p>
-      <p><b>Corrección de coordenada.</b> El punto de entrada de las pruebas 3 y 4 estaba mal medido (y = 1380 en vez de 1680). Al corregirlo, todos los resultados salieron idénticos: el método usa el orden de los sensores por distancia, y ese orden no cambia. Fuente: <code>docs/findings_and_rationale.md</code>.</p>
-      <p><b>Nota sobre la figura del mapa espacial.</b> El mapa por prueba del análisis (<code>forced_air_spatial_map.png</code>) no se muestra aquí porque rotula mal la prueba 1 como "no concluyente". Está pendiente de corregir en el repo de análisis.</p>
+      <p><b>Corrección de coordenada.</b> El punto de entrada de las pruebas 3 y 4 estaba mal medido (y = 1380 en vez de 1680). Al corregirlo, todos los resultados salieron idénticos: el método usa el orden de los sensores por distancia, y ese orden no cambia.</p>
     </div>
   </details>
 
