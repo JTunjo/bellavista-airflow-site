@@ -10,7 +10,7 @@
     // docs/findings_and_rationale.md — "Findings: wet-coffee", fase de ascenso
     "cafe-ascenso": {
       titulo: "Cuánto subió la humedad en los primeros 5 días con café",
-      sub: "Puntos de humedad relativa por encima de lo normal en cada sitio, comparado contra la línea 5.",
+      sub: "Puntos de humedad relativa que subió cada sitio más que la línea 5 (extremo Ventana O), que es la referencia.",
       unidad: "puntos de HR",
       series: [{ k: "v", nombre: "Subida", color: AZUL }],
       dominio: [0, 10], ticks: [0, 2, 4, 6, 8, 10], signo: true, anchoEtiqueta: 250,
@@ -18,7 +18,7 @@
         { etiqueta: "Junto al café, centro del ancho", v: 8.8 },
         { etiqueta: "Junto al café, lado ventanas", v: 9.4 },
         { etiqueta: "Resto de la nave, hasta ~9 m", rango: [2, 4], tip: "Casi todos los sensores: entre +2 y +4 puntos, sin bajar con la distancia" },
-        { etiqueta: "Línea 5, extremo Ventana O", v: 0, textoValor: "0 · es la referencia", tip: "Sin subida. Es la línea usada como referencia de comparación" },
+        { etiqueta: "Línea 5, extremo Ventana O", v: 0, textoValor: "0 · es la referencia", tip: "Es la referencia: los demás se miden contra ella, así que su valor es 0 por definición" },
       ],
       tabla: t(["Sitio", "Subida (puntos de HR)"], [
         ["Junto al café, centro del ancho (sensor 303)", "+8,8"],
