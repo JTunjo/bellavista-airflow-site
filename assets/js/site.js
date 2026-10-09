@@ -82,7 +82,7 @@
     const capas = new Set((fig.dataset.plano || "").split(/\s+/).filter(Boolean));
     const enlaces = fig.dataset.enlaces ? JSON.parse(fig.dataset.enlaces) : {};
     const t = [];
-    t.push(`<defs><marker id="flecha-sol" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#9A6410"/></marker></defs>`);
+    t.push(`<defs><marker id="flecha-sol" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#E39A12"/></marker></defs>`);
 
     t.push(`<rect class="shed" x="0" y="0" width="${G.largo}" height="${G.ancho}" rx="4"/>`);
     if (capas.has("division")) {
@@ -93,7 +93,7 @@
     if (capas.has("cafe")) {
       const c = G.cafe;
       t.push(`<rect class="coffee" x="${sx(c.y[0])}" y="${sy(c.x[1])}" width="${c.y[1] - c.y[0]}" height="${c.x[1] - c.x[0]}"/>`);
-      t.push(`<line stroke="#B0413E" stroke-width="3" stroke-dasharray="8 6" x1="${sx(c.y[0])}" x2="${sx(c.y[1])}" y1="${sy(c.div)}" y2="${sy(c.div)}"/>`);
+      t.push(`<line stroke="#DF1B41" stroke-width="3" stroke-dasharray="8 6" x1="${sx(c.y[0])}" x2="${sx(c.y[1])}" y1="${sy(c.div)}" y2="${sy(c.div)}"/>`);
       t.push(`<text class="coffee-label" x="${sx(c.y[0]) + 10}" y="${sy(c.x[0]) - 14}">café</text>`);
     }
     if (capas.has("cortes")) {
@@ -150,7 +150,7 @@
       const [y0, y1, x0, x1] = z.rect;
       let g = "";
       if (!z.forma) g += `<rect class="zona-fill" x="${sx(y0)}" y="${sy(x1)}" width="${y1 - y0}" height="${x1 - x0}"/><rect class="zona" x="${sx(y0)}" y="${sy(x1)}" width="${y1 - y0}" height="${x1 - x0}" rx="6"/>`;
-      g += `<circle cx="${z.m[0]}" cy="${z.m[1]}" r="27" fill="#1D2A24"/><text x="${z.m[0]}" y="${z.m[1] + 10}" text-anchor="middle" style="font:700 30px var(--f-display);fill:#fff">${z.letra}</text>`;
+      g += `<circle cx="${z.m[0]}" cy="${z.m[1]}" r="27" fill="#0A2540"/><text x="${z.m[0]}" y="${z.m[1] + 10}" text-anchor="middle" style="font:600 30px var(--f-display);fill:#fff">${z.letra}</text>`;
       if (enlaces[k]) {
         g = `<a href="${enlaces[k].href}" aria-label="${enlaces[k].label}"><rect class="hit" x="${sx(y0)}" y="${sy(x1)}" width="${y1 - y0}" height="${x1 - x0}"/>${g}</a>`;
       }
@@ -160,7 +160,7 @@
     // brújula: el eje y apunta a 312° (NO); el norte queda 48° por debajo de la derecha
     const cx = 1800, cy = 560, a = 48 * Math.PI / 180, ux = Math.cos(a), uy = Math.sin(a);
     t.push(`<line class="compass" x1="${cx - ux * 34}" y1="${cy - uy * 34}" x2="${cx + ux * 40}" y2="${cy + uy * 40}" marker-end="url(#flecha-n)"/>`);
-    t.push(`<defs><marker id="flecha-n" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1D2A24"/></marker></defs>`);
+    t.push(`<defs><marker id="flecha-n" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0A2540"/></marker></defs>`);
     t.push(`<text class="compass-n" text-anchor="middle" x="${cx + ux * 68}" y="${cy + uy * 68 + 10}">N</text>`);
 
     const titulo = fig.dataset.titulo || "Plano de la marquesina visto desde arriba";
@@ -317,9 +317,9 @@
         }
         if (f.bigote) {
           const [a, b] = f.bigote;
-          s.push(`<line x1="${X(a)}" x2="${X(b)}" y1="${y + bh / 2}" y2="${y + bh / 2}" stroke="#1D2A24" stroke-width="1.5"/>`);
-          s.push(`<line x1="${X(a)}" x2="${X(a)}" y1="${y + 4}" y2="${y + bh - 4}" stroke="#1D2A24" stroke-width="1.5"/>`);
-          s.push(`<line x1="${X(b)}" x2="${X(b)}" y1="${y + 4}" y2="${y + bh - 4}" stroke="#1D2A24" stroke-width="1.5"/>`);
+          s.push(`<line x1="${X(a)}" x2="${X(b)}" y1="${y + bh / 2}" y2="${y + bh / 2}" stroke="#0A2540" stroke-width="1.5"/>`);
+          s.push(`<line x1="${X(a)}" x2="${X(a)}" y1="${y + 4}" y2="${y + bh - 4}" stroke="#0A2540" stroke-width="1.5"/>`);
+          s.push(`<line x1="${X(b)}" x2="${X(b)}" y1="${y + 4}" y2="${y + bh - 4}" stroke="#0A2540" stroke-width="1.5"/>`);
         }
         const lx = v < 0 ? xa - 6 : Math.max(x1, f.bigote ? X(f.bigote[1]) : x1) + 6;
         const txt = f.textoValor ?? ((v > 0 && c.signo ? "+" : "") + fmt(v, c.dec ?? 1));

@@ -1,7 +1,7 @@
 /* Datos de los gráficos propios. Cada número sale textual de un documento del repo de
    análisis (se indica cuál). Si un documento cambia, actualizar aquí a mano. */
 (() => {
-  const AZUL = "#2F6FA8", CEREZA = "#B0413E", GRIS = "#7C8A82";
+  const AZUL = "#0570DE", CEREZA = "#DF1B41", GRIS = "#8792A2";
   const t = (cab, filas) =>
     `<div class="tabla-wrap"><table><thead><tr>${cab.map((h, i) => `<th${i ? ' class="n"' : ""}>${h}</th>`).join("")}</tr></thead><tbody>${
       filas.map(f => `<tr>${f.map((c, i) => `<td${i ? ' class="n"' : ""}>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
