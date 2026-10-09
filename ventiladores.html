@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pruebas de ventilador · Marquesina Bellavista</title>
+<meta name="description" content="Qué se pudo leer de las 6 pruebas de ventilador del 22 y 23 de agosto, y por qué la mayoría no fueron concluyentes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/graficos.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<header data-site-head></header>
+<main>
+
+  <div class="page-head">
+    <div class="tags"><span class="origen origen--sensores">Sensores</span></div>
+    <h1>Pruebas de ventilador: solo 2 de 6 se pudieron leer</h1>
+    <p class="lede">El 22 y 23 de agosto se hicieron 6 pulsos de ventilador con nebulizador, de 20 a 49 minutos, desde tres puntos de la nave. La pregunta era hacia dónde y hasta dónde llega el aire. El clima de esos días complicó la respuesta.</p>
+  </div>
+
+  <figure class="plano" data-plano="ventiladores externos" data-titulo="Plano con los tres puntos desde donde sopló el ventilador">
+    <figcaption><div class="leyenda-plano"><span><i style="background:#E2B100;border-radius:2px"></i>punto de entrada del ventilador: frente (junto a Puerta S), lateral (medio de la nave), fondo (junto a Puerta N)</span></div></figcaption>
+  </figure>
+
+  <section>
+    <h2>Primero, el clima: cambia más de un día a otro que lo que mueve el ventilador</h2>
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido</span>
+        <p class="claim-text">Al mediodía, la humedad de afuera puede variar de 10 a 22 puntos entre un día y otro, justo en el horario de las pruebas.</p>
+        <p class="claim-more">Comparar un día de prueba contra un día normal mide sobre todo el clima. Por eso se descontó lo que marcaban los sensores de afuera a la misma hora. Después de esa corrección, el ruido que queda es de solo 0,5 a 1,9 puntos.</p>
+      </li>
+    </ul>
+    <figure class="fig">
+      <div class="fig-frame"><img src="assets/fig/sensores/external_humidity_halfhour_overlay.png" alt="Humedad de afuera por media hora del día, una línea por sensor y por día" loading="lazy"></div>
+      <figcaption>
+        <span class="mirar">Qué mirar: lo ancho que es el haz de líneas entre las 9 y las 16 h.</span>
+        Cada línea es un día en uno de los tres sensores de afuera. De noche todos los días se parecen (70–90 %); al mediodía un día puede estar en 25 % y otro en 50 %.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Las 6 pruebas</h2>
+    <p class="prose">Una prueba cuenta como legible solo si el efecto es más fuerte cerca del ventilador y más débil lejos. Si toda la nave cambia parejo, lo más probable es que sea el clima y no el ventilador.</p>
+
+    <div class="pruebas" role="table" aria-label="Resultado de las 6 pruebas por día y punto de entrada">
+      <div class="h" role="columnheader"></div>
+      <div class="h" role="columnheader">Frente · junto a Puerta S</div>
+      <div class="h" role="columnheader">Lateral · medio de la nave</div>
+      <div class="h" role="columnheader">Fondo · junto a Puerta N</div>
+
+      <div class="dia" role="rowheader">Día 1 <small>22 ago · todo cerrado</small></div>
+      <div class="prueba si" role="cell"><span class="entrada-m">Frente · </span><span class="t">Prueba 1 · 12:00</span><span class="sello sello--solido">Legible</span><span class="d">El efecto avanza: llega más tarde a los sensores lejanos.</span></div>
+      <div class="prueba" role="cell"><span class="entrada-m">Lateral · </span><span class="t">Prueba 2 · 14:00</span><span class="sello sello--sinrespaldo">No legible</span><span class="d">Sin diferencia entre cerca y lejos.</span></div>
+      <div class="prueba si" role="cell"><span class="entrada-m">Fondo · </span><span class="t">Prueba 3 · 16:00</span><span class="sello sello--solido">Legible</span><span class="d">Llega a toda la nave casi a la vez, más débil lejos.</span></div>
+
+      <div class="dia" role="rowheader">Día 2 <small>23 ago · ventanas abiertas al apagar</small></div>
+      <div class="prueba" role="cell"><span class="entrada-m">Frente · </span><span class="t">Prueba 6 · 13:00</span><span class="sello sello--sinrespaldo">No legible</span><span class="d">Mismo punto que la prueba 1; esta vez no alcanzó.</span></div>
+      <div class="prueba" role="cell"><span class="entrada-m">Lateral · </span><span class="t">Prueba 5 · 11:00</span><span class="sello sello--sinrespaldo">No legible</span><span class="d">Más efecto lejos que cerca: al revés de lo esperado.</span></div>
+      <div class="prueba" role="cell"><span class="entrada-m">Fondo · </span><span class="t">Prueba 4 · 9:00</span><span class="sello sello--sinrespaldo">No legible</span><span class="d">Esa mañana el clima cambió muy rápido; la nave entera se movió pareja.</span></div>
+    </div>
+
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido</span>
+        <p class="claim-text">Solo 2 de las 6 pruebas muestran un efecto local real del ventilador: la 1 y la 3, ambas del primer día.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· pero solo 2 pruebas</span></span>
+        <p class="claim-text">Esas dos se comportaron distinto: en la prueba 1 el efecto avanzó como un frente; en la prueba 3 llegó a todas partes al mismo tiempo, solo que más débil lejos.</p>
+        <p class="claim-more">Con dos casos no se puede decir cuál es el comportamiento normal del ventilador en esta nave.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--sugestivo">Sugestivo</span>
+        <p class="claim-text">Las dos pruebas legibles soplaban a 2 metros de una puerta. La del medio de la nave, a más de 5 metros de cualquier abertura, no fue legible ninguna de las dos veces.</p>
+        <p class="claim-more">Puede ser la cercanía a la abertura o simplemente la pared al lado. Con 3 puntos de entrada no se puede separar.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--sinrespaldo">Aún sin respaldo</span>
+        <p class="claim-text">Con estos datos todavía no se pueden fijar ajustes del ventilador (tiempos, duración) para el control automático.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Abrir las ventanas después del ventilador</h2>
+    <p class="prose">El segundo día, apenas se apagaba cada pulso, se abrieron las dos ventanas por más de una hora (las puertas siguieron cerradas). Eso no quedó registrado en la bitácora; se reconstruyó después. Así que el día 2 no fue una repetición del día 1: fue otro experimento.</p>
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--sugestivo">Sugestivo <span class="q">· 1 caso</span></span>
+        <p class="claim-text">En una de las tres pruebas del día 2 (la 5), la humedad que quedó después del pulso se ubicó cerca de la ventana, no cerca del ventilador.</p>
+        <p class="claim-more">Es una señal limpia, pero es un solo caso, y en ese punto "cerca de la ventana" y "lejos del ventilador" son casi lo mismo. Encaja con la idea de que ventilar cambia dónde queda la humedad; no la prueba.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--sinrespaldo">Aún sin respaldo</span>
+        <p class="claim-text">Si abrir las ventanas hace que la humedad vuelva más rápido a lo normal.</p>
+        <p class="claim-more">Las pruebas difieren en demasiadas cosas (punto de entrada, duración, tiempo disponible antes de la siguiente) para comparar.</p>
+      </li>
+    </ul>
+    <figure class="fig">
+      <div class="fig-frame"><img src="assets/fig/sensores/post_fan_decay_magnitude.png" alt="Humedad residual promedio en los minutos después de apagar el ventilador, día 1 contra día 2" loading="lazy"></div>
+      <figcaption>
+        <span class="mirar">Qué mirar: no hay un patrón claro entre las líneas sólidas (día 1, cerrado) y las punteadas (día 2, ventanas abiertas).</span>
+        Por eso esta comparación queda sin respaldo. La figura numera las pruebas desde 0: "evento 0" = prueba 1, "evento 5" = prueba 6.
+      </figcaption>
+    </figure>
+  </section>
+
+  <details class="tecnico">
+    <summary>Detalle técnico <span class="sub">corrección, criterio de legibilidad, números por prueba</span></summary>
+    <div class="body">
+      <p><b>Corrección por clima (diferencia en diferencias).</b> Para cada prueba se compara el día de la prueba con días "tranquilos" a la misma hora, y se le resta la anomalía promedio de los sensores de afuera en ese mismo instante: <code>anomalía corregida = anomalía − promedio(anomalía externa)</code>. El ruido residual (cuánto discrepan entre sí los 3 sensores externos después de quitar lo común) queda en 0,5–1,9 puntos, contra 10–22 sin corregir.</p>
+      <p><b>Criterio de legibilidad.</b> Correlación de Spearman entre distancia al punto de entrada y |anomalía corregida|, calculada aparte para humedad y temperatura. Cuenta como legible si r ≤ −0,3 y p ≤ 0,10. Una versión anterior y más débil (solo "el sensor más afectado supera 2 veces el ruido") daba 5 de 6; este criterio da 2 de 6.</p>
+      <div class="tabla-wrap"><table>
+        <thead><tr><th>Prueba</th><th>Fecha y hora</th><th>Entrada (x, y, z cm)</th><th class="n">Abertura más cercana</th><th class="n">r</th><th class="n">p</th><th>Legible</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>22 ago 12:00</td><td>(204, 50, 60) frente</td><td class="n">Puerta S, 204 cm</td><td class="n">−0,86</td><td class="n">8×10⁻⁵</td><td>Sí</td></tr>
+          <tr><td>2</td><td>22 ago 14:00</td><td>(30, 820, 140) lateral</td><td class="n">Ventana O, 513 cm</td><td class="n">+0,32</td><td class="n">0,26</td><td>No</td></tr>
+          <tr><td>3</td><td>22 ago 16:00</td><td>(204, 1680, 60) fondo</td><td class="n">Puerta N, 204 cm</td><td class="n">−0,85</td><td class="n">1×10⁻⁴</td><td>Sí</td></tr>
+          <tr><td>4</td><td>23 ago 09:00</td><td>(204, 1680, 60) fondo</td><td class="n">Puerta N, 204 cm</td><td class="n">+0,07</td><td class="n">0,82</td><td>No</td></tr>
+          <tr><td>5</td><td>23 ago 11:00</td><td>(30, 820, 140) lateral</td><td class="n">Ventana O, 513 cm</td><td class="n">+0,58</td><td class="n">0,025 (signo opuesto)</td><td>No</td></tr>
+          <tr><td>6</td><td>23 ago 13:00</td><td>(204, 50, 60) frente</td><td class="n">Puerta S, 204 cm</td><td class="n">−0,42</td><td class="n">0,12</td><td>No</td></tr>
+        </tbody>
+      </table></div>
+      <p><b>Dirección.</b> Prueba 1: la demora del pico crece con la distancia (r = +0,61, p = 0,02), un frente que viaja. Prueba 3: la amplitud cae con la distancia (r = −0,85) pero la demora no (r = −0,07, n.s.), atenuación pareja.</p>
+      <p><b>Prueba 4.</b> Esa mañana la humedad de afuera pasó de unos −8 a +19 puntos de anomalía en hora y media, más rápido de lo que la nave podía seguir. Se ve como una anomalía negativa casi igual en todo el volumen, sin relación con la distancia.</p>
+      <p><b>Después de apagar (30–90 min).</b> Correlación con la distancia al ventilador frente a la distancia a la ventana más cercana. Prueba 5: ventilador r = +0,41 (p = 0,125, signo opuesto), ventana r = −0,72 (p = 0,003). Pruebas 1 y 3 (día 1): centradas en el ventilador (r = −0,80 y −0,60). Pruebas 4 y 6: ninguna encaja.</p>
+      <p><b>Corrección de coordenada.</b> El punto de entrada de las pruebas 3 y 4 estaba mal medido (y = 1380 en vez de 1680). Al corregirlo, todos los resultados salieron idénticos: el método usa el orden de los sensores por distancia, y ese orden no cambia. Fuente: <code>docs/findings_and_rationale.md</code>.</p>
+      <p><b>Nota sobre la figura del mapa espacial.</b> El mapa por prueba del análisis (<code>forced_air_spatial_map.png</code>) no se muestra aquí porque rotula mal la prueba 1 como "no concluyente". Está pendiente de corregir en el repo de análisis.</p>
+    </div>
+  </details>
+
+  <nav data-pager></nav>
+</main>
+<footer class="site-foot">Estudio de la marquesina de secado de café de Bellavista · datos del 21 de agosto al 12 de septiembre de 2026 · versión del 8 de octubre de 2026.</footer>
+</body>
+</html>

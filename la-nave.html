@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La nave · Marquesina Bellavista</title>
+<meta name="description" content="Orientación de la marquesina, ubicación de sensores, puertas y ventanas, y por dónde le pega el sol a cada hora.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/graficos.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<header data-site-head></header>
+<main>
+
+  <div class="page-head">
+    <div class="tags"><span class="origen origen--sensores">Sensores</span></div>
+    <h1>La nave: cómo está orientada y por dónde le pega el sol</h1>
+    <p class="lede">Antes de hablar del aire hay que ubicarse. La marquesina mide 17 metros de largo y 4,4 de ancho, y casi todo lo que pasa adentro depende de qué lado mira al sol.</p>
+  </div>
+
+  <figure class="plano" data-plano="cafe externos sol" data-titulo="Plano de la marquesina con puertas, ventanas, sensores, café y el sol de mañana y de tarde">
+    <figcaption>
+      <div class="leyenda-plano">
+        <span><i style="background:var(--ink)"></i>sensor de humedad y temperatura (dentro)</span>
+        <span><i style="background:var(--paper);border:2px solid var(--ink);border-radius:2px"></i>sensor externo</span>
+        <span><i style="background:var(--cherry-soft);border:2px solid var(--cherry);border-radius:2px"></i>café húmedo, 25 de agosto a 7 de septiembre</span>
+        <span><i style="background:var(--air);border-radius:2px"></i>puertas (sólidas) y ventanas (punteadas)</span>
+      </div>
+    </figcaption>
+  </figure>
+
+  <section class="prose">
+    <h2>Lo que hay que saber del lugar</h2>
+    <ul>
+      <li>Las <b>dos puertas</b> están en la pared que mira al <b>noreste</b>. Las <b>dos ventanas</b>, arriba, en la pared que mira al <b>suroeste</b>.</li>
+      <li>"Ventana E" y "Ventana O" son nombres de posición a lo largo de la nave: la E está hacia el extremo sureste y la O hacia el extremo noroeste. No indican hacia dónde mira la pared.</li>
+      <li>Hay <b>15 puntos de medición adentro</b>, cada uno con humedad y temperatura, en 5 líneas (L1 a L5) de 3 sensores. Están entre 1,1 y 2,2 metros de altura. Hay 3 más <b>afuera</b>, del lado de las puertas, bajo una cubierta transparente.</li>
+      <li>El techo es opaco y de una sola caída: 2,75 m del lado de las puertas, 2,30 m del lado de las ventanas. Las paredes son de plástico de invernadero.</li>
+      <li>Las camas de secado están en tres niveles: a 55, 90 y 140 cm del piso.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>El sol: de mañana calienta el lado de las puertas, de tarde el de las ventanas</h2>
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido</span>
+        <p class="claim-text">El lado de las puertas se calienta primero, entre las 7 y las 9 de la mañana. El lado de las ventanas sigue fresco toda la mañana y se calienta en la tarde.</p>
+        <p class="claim-more">A esta latitud el sol sale casi por el oriente y al mediodía pasa casi encima. Lo que decide cuándo se calienta un sensor es de qué lado del ancho está, no su altura ni su posición a lo largo.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--sugestivo">Sugestivo</span>
+        <p class="claim-text">A las 11 de la mañana, en el centro de la nave, el aire ya se ordena por altura: más caliente arriba, más fresco abajo, como cuando calienta el techo.</p>
+        <p class="claim-more">Esto se ve todos los días. Que sea por el sol sobre el techo se apoya en un solo indicador indirecto, así que es una explicación probable, no probada. Por eso el modelo usa las 11:00.</p>
+      </li>
+    </ul>
+
+    <figure class="fig">
+      <div class="fig-frame"><img src="assets/fig/modelo/hod_sun_vs_observed.png" alt="Tres gráficos por hora del día: sol sobre cada pared, exposición modelada de los sensores y calentamiento medido por lado de la nave" loading="lazy"></div>
+      <figcaption>
+        <span class="mirar">Qué mirar: el panel de abajo (C).</span>
+        La línea azul es el lado de las puertas: sube de golpe a las 7 y llega a +1,6 °C sobre el promedio de la nave hacia las 8:40. La verde es el lado de las ventanas: queda por debajo del promedio toda la mañana y se calienta después de las 14 h. El panel de arriba muestra qué pared recibe sol a cada hora. La línea punteada marca las 11:00.
+        <span class="en">Figura con rótulos en inglés: "NE side" = lado puertas, "SW side" = lado ventanas, "roof" = techo.</span>
+      </figcaption>
+    </figure>
+
+    <p class="prose">El café húmedo no cambió este patrón de temperatura de las 11:00: con y sin café, los sensores dan casi el mismo cuadro.</p>
+  </section>
+
+  <details class="tecnico">
+    <summary>Detalle técnico <span class="sub">orientación, orden de calentamiento, el corte de las 11:00</span></summary>
+    <div class="body">
+      <p><b>Orientación.</b> El eje largo apunta a 312° (noroeste). Un modelo de sol directo solo se ajusta a lo que miden los sensores si la pared de las puertas mira al noreste (r = +0,37, con 30 min de desfase), no si mira al suroeste (r = −0,14). Los sensores externos lo confirman sin modelo: llegan a su máximo a las 10:20–10:30 (adentro, a las 14:00) y están 1–2 °C sobre el interior en la mañana y 2–2,6 °C por debajo en la tarde.</p>
+      <p><b>Orden de calentamiento.</b> La hora en que cada sensor empieza a calentarse depende solo de su posición a lo ancho (+2,6 h por desviación estándar, p = 0,001); ni el largo (p = 0,44) ni la altura (p = 0,80) importan. Los dos sensores bajos del lado NE en los extremos (302 y 326) llegan a +3,4 °C hacia las 8:40. Los sensores están bien protegidos de la radiación directa, así que es calentamiento real del aire. El efecto de la mañana es solar: la diferencia NE−SO de cada día sigue al calentamiento matutino de los sensores externos (ρ = +0,87, p &lt; 0,001, 16 días).</p>
+      <p><b>11:00.</b> La correlación del calentamiento con la altura es ρ = +0,50 y con el ancho ρ = −0,43 (negativa los 19 días). La estratificación de las 11:00 acompaña al calentamiento externo acumulado hasta las 11 h (ρ = +0,54, p = 0,03, 16 días). Es uno de varios indicadores probados: apoyo, no prueba. Los promedios por sensor a las 11:00 con y sin café correlacionan r = 0,95.</p>
+      <p><b>Límites.</b> Los sensores externos están bajo una cubierta con ~15 % de sombra: sirven como índice de sol, pero exageran la temperatura del aire al mediodía. El modelo de sol es simple (sin aleros ni obstáculos): acierta la hora y el lado, no los tamaños. Fuente: <code>docs/hod_seasonality_findings.md</code>.</p>
+
+      <figure class="fig">
+        <div class="fig-frame"><img src="assets/fig/modelo/hod_excess_heatmap.png" alt="Mapa de calor: calentamiento de cada sensor por hora del día" loading="lazy"></div>
+        <figcaption><span class="mirar">Cada fila es un sensor; rojo = más caliente que el promedio, azul = más fresco.</span>Las filas están agrupadas por lado: puertas (x70) arriba, centro (x204), ventanas (x355) abajo. El rojo de las 7–10 h está en el grupo de arriba; el de la tarde, en las filas de y1340 (extremo NO).</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="fig-frame"><img src="assets/fig/modelo/hod_spatial_rho_by_hour.png" alt="Qué dirección organiza la temperatura a cada hora" loading="lazy"></div>
+        <figcaption><span class="mirar">Qué dirección manda a cada hora.</span>Azul = a lo ancho (manda en la mañana), verde = la altura (manda de 10:30 a 14 h), naranja = a lo largo (aparece en la tarde, cuando calienta el extremo NO).</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="fig-frame"><img src="assets/fig/modelo/hod_slice_1100_map.png" alt="Temperatura de cada sensor a las 11:00, vista en planta y en alzado" loading="lazy"></div>
+        <figcaption><span class="mirar">La temperatura que usa el modelo.</span>Cada punto es un sensor a las 11:00 (promedio de 19 días), en grados sobre el promedio de la nave. Arriba en planta, abajo de costado. Los más fríos son los bajos del centro y del lado de las ventanas (318: −1,12 °C; 322: −1,02 °C).</figcaption>
+      </figure>
+    </div>
+  </details>
+
+  <nav data-pager></nav>
+</main>
+<footer class="site-foot">Estudio de la marquesina de secado de café de Bellavista · datos del 21 de agosto al 12 de septiembre de 2026 · versión del 8 de octubre de 2026.</footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café húmedo · Marquesina Bellavista</title>
+<meta name="description" content="Qué pasó con la humedad de la marquesina durante los 13 días con café húmedo, y qué falta saber sobre el secado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/graficos.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<header data-site-head></header>
+<main>
+
+  <div class="page-head">
+    <div class="tags"><span class="origen origen--sensores">Sensores</span></div>
+    <h1>Café húmedo: la humedad llega a casi toda la nave</h1>
+    <p class="lede">Del 25 de agosto al 7 de septiembre hubo café húmedo en el extremo sureste: una capa de unos 2 cm en cada una de las tres camas, en dos áreas contiguas (zona A). Los sensores muestran hasta dónde llegó su humedad.</p>
+  </div>
+
+  <figure class="plano" data-plano="cafe linea5" data-titulo="Plano: las dos áreas de café en el extremo sureste y la línea 5 junto a la Ventana O">
+    <figcaption><div class="leyenda-plano"><span><b>A</b>&nbsp;las dos áreas de café (centro y lado ventanas)</span><span><b>D</b>&nbsp;línea 5, extremo de la Ventana O</span></div></figcaption>
+  </figure>
+
+  <section>
+    <h2>Lo que se vio mientras había café</h2>
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido</span>
+        <p class="claim-text">Justo al lado de cada área de café, la humedad subió unos 9 puntos sobre lo normal.</p>
+        <p class="claim-more">+8,8 puntos junto al área del centro y +9,4 junto a la del lado de las ventanas. Las dos dan una señal clara y parecida.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido</span>
+        <p class="claim-text">En casi todo el resto de la nave, hasta unos 9 metros del café, la humedad también subió: entre 2 y 4 puntos, y no baja con la distancia.</p>
+        <p class="claim-more">Pasó en 11 de 12 sensores. Estar lejos del café, dentro de ese rango, no significó aire más seco.</p>
+      </li>
+      <li class="claim" id="linea5">
+        <span class="sello sello--solido">Sólido</span>
+        <p class="claim-text">La línea 5, en el extremo de la Ventana O, a más de 10 metros del café, no mostró subida.</p>
+        <p class="claim-more">Es la única zona que se comporta distinto: no es "un poco menos húmeda", es "sin señal". Por eso es la candidata más clara a zona más seca mientras hay café húmedo.</p>
+      </li>
+    </ul>
+
+    <div class="chart" data-grafico="cafe-ascenso"></div>
+
+    <figure class="fig">
+      <div class="fig-frame"><img src="assets/fig/sensores/wet_coffee_zone_differential.png" alt="Diferencia diaria de humedad entre el sensor junto a cada área de café y la línea 5, del 21 de agosto al 12 de septiembre" loading="lazy"></div>
+      <figcaption>
+        <span class="mirar">Qué mirar: las dos líneas suben cuando entra el café (zona sombreada) y se quedan arriba.</span>
+        Cada línea es el sensor de al lado de un área de café, comparado contra la línea 5. Azul ("evento 6") = área del centro; naranja ("evento 7") = área del lado de las ventanas. El pico del 28 de agosto llega a unos 9 puntos; después se mantienen entre 2 y 3,5. Tras el retiro (7 de septiembre) bajan un poco, pero no del todo.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Lo que todavía no se sabe: qué zonas se secan más rápido</h2>
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--confirmar">Por confirmar</span>
+        <p class="claim-text">Después de sacar el café, casi todos los sensores tienden a volver a lo normal, pero ninguna zona muestra todavía una velocidad de secado confiable.</p>
+        <p class="claim-more">Solo había 5 días de datos después del retiro. La pregunta que más importa para decidir dónde poner el café es esta, y se resuelve volviendo a correr el análisis cuando haya más días.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="prose">
+    <h2>Qué significa</h2>
+    <p>Mientras hay café húmedo, la mayor parte de la nave comparte una carga de humedad parecida: alejar el café unos metros no lo pone en aire más seco. La excepción es el extremo de la Ventana O. El modelo del aire coincide con esto: a la mitad noroeste de la nave la humedad del café llega menos y más tarde (ver <a href="modelo.html#humedad">El modelo</a>).</p>
+    <p>Todo esto mide la humedad del aire alrededor del café, no la del grano. Para saber cuánto se está secando el café mismo hay que pesarlo o medirlo dentro del grano (ver <a href="proximos-pasos.html">Próximos pasos</a>).</p>
+  </section>
+
+  <details class="tecnico">
+    <summary>Detalle técnico <span class="sub">método, referencia, valores atípicos</span></summary>
+    <div class="body">
+      <p><b>Método.</b> Cada día se compara la zona junto al café con una zona de control lejos de las dos áreas (la línea 5, a ≥ 10 m), y se corrige con la diferencia que ya existía entre las dos zonas antes de que llegara el café. Es la misma idea de "diferencia en diferencias" de las pruebas de ventilador, pero con un control dentro de la nave en vez de afuera. La línea 5 es, por construcción, la referencia: las subidas de los demás sensores se miden respecto de ella.</p>
+      <p><b>Las dos áreas estuvieron al mismo tiempo.</b> Un sensor lejos de ambas mide el efecto combinado; no se puede atribuir a una sola. Solo los sensores pegados a cada área (a 83–90 cm) separan las dos. Por eso el resto se reporta en una sola tabla, por distancia al área más cercana.</p>
+      <p><b>Valor atípico.</b> El sensor 311 (+7,95 puntos) tuvo solo 2 días de datos antes del café en vez de 4, así que su punto de partida es menos confiable.</p>
+      <p><b>Secado.</b> Pendientes después del retiro: entre −0,01 y −0,25 puntos por día en casi todos los sensores con señal; ninguna significativa (p &gt; 0,11, 5 días por sensor). El sensor 323, en el borde del área medida, da +0,056 (tampoco significativo, probablemente ruido). Fuente: <code>docs/findings_and_rationale.md</code>, sección "Findings: wet-coffee".</p>
+      <figure class="fig">
+        <div class="fig-frame"><img src="assets/fig/sensores/wet_coffee_rise_map.png" alt="Subida de humedad de cada sensor durante los primeros días con café, vista de costado" loading="lazy"></div>
+        <figcaption><span class="mirar">La subida en cada sensor, vista de costado (largo × altura).</span>Casi todos los puntos tienen el mismo tono (+2 a +4). El oscuro es el sensor 311, el atípico. La estrella marca la posición del café a lo largo de la nave.</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="fig-frame"><img src="assets/fig/sensores/wet_coffee_decay_map.png" alt="Pendiente de secado de cada sensor tras el retiro del café" loading="lazy"></div>
+        <figcaption><span class="mirar">La tendencia de secado tras el retiro.</span>Azul = tiende a secarse. Ninguno de estos valores es todavía estadísticamente confiable.</figcaption>
+      </figure>
+    </div>
+  </details>
+
+  <nav data-pager></nav>
+</main>
+<footer class="site-foot">Estudio de la marquesina de secado de café de Bellavista · datos del 21 de agosto al 12 de septiembre de 2026 · versión del 8 de octubre de 2026.</footer>
+</body>
+</html>

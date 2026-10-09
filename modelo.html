@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El modelo · Marquesina Bellavista</title>
+<meta name="description" content="Simulación por computador del aire de la marquesina a las 11:00, con y sin café húmedo: dos remolinos, zonas quietas y a dónde va la humedad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/graficos.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<header data-site-head></header>
+<main>
+
+  <div class="page-head">
+    <div class="tags"><span class="origen origen--modelo">Modelo</span></div>
+    <h1>El modelo: el aire gira en dos grandes remolinos</h1>
+    <p class="lede">Los sensores dicen qué pasó en 15 puntos. Un modelo por computador ayuda a ver el aire entre ellos: por dónde circula, dónde se queda quieto y a dónde lleva la humedad del café.</p>
+  </div>
+
+  <figure class="plano" data-plano="cafe cortes division rincon" data-titulo="Plano con los tres cortes del modelo, la división entre remolinos y el rincón más quieto">
+    <figcaption><div class="leyenda-plano">
+      <span><i style="background:var(--air);border-radius:2px;height:3px"></i>los tres cortes simulados (lado puertas, centro, lado ventanas)</span>
+      <span><b>B</b>&nbsp;rincón más quieto</span>
+      <span><b>C</b>&nbsp;donde se dividen los remolinos</span>
+    </div></figcaption>
+  </figure>
+
+  <section class="prose">
+    <h2>Qué es y qué no es este modelo</h2>
+    <p>Simula una <b>rebanada vertical</b> de la nave a lo largo (17 m de largo por la altura), como si se cortara de punta a punta. Se hicieron tres rebanadas: cerca de las puertas, en el centro y cerca de las ventanas.</p>
+    <ul>
+      <li>Representa las <b>11 de la mañana</b>, con las <b>ventanas abiertas y las puertas cerradas</b>, sin ventiladores. Lo único que mueve el aire es que el aire caliente sube y el frío baja.</li>
+      <li>Las temperaturas no se inventan: se toman de lo que marcan los sensores a esa hora, en días con café y en días sin café.</li>
+      <li>Las camas están siempre. El café es una capa sobre las tres camas en el extremo sureste.</li>
+    </ul>
+    <p><b>Sirve para ver patrones</b>: dónde gira el aire, dónde se queda quieto, hacia dónde va la humedad. <b>No sirve para dar velocidades exactas</b>: pueden estar equivocadas hasta por el doble.</p>
+  </section>
+
+  <section id="remolinos">
+    <h2>Dos remolinos que dividen la nave</h2>
+    <div class="fig fig--wide">
+      <div class="tabs">
+        <button aria-controls="p-centro" aria-selected="true">Centro del ancho</button>
+        <button aria-controls="p-ne">Lado puertas</button>
+        <button aria-controls="p-so">Lado ventanas</button>
+      </div>
+      <div id="p-centro" role="tabpanel"><div class="fig-frame"><video src="assets/fig/modelo/anim_particles.mp4" poster="assets/fig/modelo/anim_particles.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Animación de partículas llevadas por el aire, corte del centro, sin y con café"></video></div></div>
+      <div id="p-ne" role="tabpanel" hidden><div class="fig-frame"><video src="assets/fig/modelo/anim_particles_x070.mp4" poster="assets/fig/modelo/anim_particles_x070.jpg" muted loop playsinline controls preload="none" aria-label="Animación de partículas, corte del lado de las puertas"></video></div></div>
+      <div id="p-so" role="tabpanel" hidden><div class="fig-frame"><video src="assets/fig/modelo/anim_particles_x355.mp4" poster="assets/fig/modelo/anim_particles_x355.jpg" muted loop playsinline controls preload="none" aria-label="Animación de partículas, corte del lado de las ventanas"></video></div></div>
+      <figcaption>
+        <span class="mirar">Qué mirar: los puntos giran en dos grandes ruedas, una a cada lado de la mitad de la nave.</span>
+        Arriba sin café, abajo con café. Los puntos más oscuros van más rápido. El rectángulo verde de la izquierda es el café sobre las tres camas; las barras naranjas arriba son las ventanas. Fíjese que con café la rueda de la izquierda (sureste) gira más despacio. Son 12 minutos de movimiento del aire.
+        <span class="en">Rótulos en inglés: "WITH/WITHOUT coffee" = con/sin café, "speed" = velocidad.</span>
+      </figcaption>
+    </div>
+
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">El aire forma dos grandes remolinos que giran en sentidos opuestos y se dividen a unos 8 a 10 metros del extremo sureste.</p>
+        <p class="claim-more">Pasa en los tres cortes, con y sin café. El aire fresco baja por el centro de la nave y el caliente sube cerca de los extremos.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">Con café, la división se corre hacia el sureste: el remolino del café se achica.</p>
+        <p class="claim-more">En el centro pasa de unos 9,7 m a unos 8,5 m.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">Hay zonas de aire casi quieto: junto a las dos paredes de los extremos (sobre todo debajo de la cama baja y en las esquinas de arriba), en el centro del remolino sureste y en la frontera entre los dos remolinos.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Con café, el extremo sureste se frena</h2>
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· tamaño incierto</span></span>
+        <p class="claim-text">En días de café, el aire del tercio sureste (donde está el café) circula como un tercio más despacio. El tercio noroeste no cambia.</p>
+        <p class="claim-more">Al cambiar los supuestos del modelo el frenado va de 26 % a 61 %, pero siempre aparece.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">Entre las camas cubiertas de café el aire queda atrapado y casi quieto.</p>
+        <p class="claim-more">Las camas con café funcionan como repisas casi sólidas. La parte de aire casi quieto entre camas, en el tercio sureste, pasa de 12 % a 27 %. Debajo del café, a ras del piso, el aire sí sigue moviéndose.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--confirmar">Por confirmar</span>
+        <p class="claim-text">Si el frenado lo causa el café mismo.</p>
+        <p class="claim-more">Unas 7 partes de cada 10 del frenado vienen de que, en días de café, el extremo sureste estaba un poco más fresco (unos 0,2 °C arriba); las otras 3, de que el café estorba el paso del aire. Que ese fresco lo cause el café al evaporar agua es posible, pero también pudo ser el clima de esos días. Con estos datos no se puede saber.</p>
+      </li>
+    </ul>
+    <div class="chart" data-grafico="modelo-velocidad"></div>
+  </section>
+
+  <section id="humedad">
+    <h2>A dónde va la humedad del café</h2>
+    <div class="fig fig--wide">
+      <div class="tabs">
+        <button aria-controls="h-centro" aria-selected="true">Centro del ancho</button>
+        <button aria-controls="h-so">Lado ventanas</button>
+      </div>
+      <div id="h-centro" role="tabpanel"><div class="fig-frame"><img src="assets/fig/modelo/anim_moisture_4h.gif" alt="Animación de 4 horas: la humedad sale del café y se reparte por la nave, corte del centro" loading="lazy"></div></div>
+      <div id="h-so" role="tabpanel" hidden><div class="fig-frame"><img src="assets/fig/modelo/anim_moisture_4h_x355.gif" alt="Animación de 4 horas: la humedad sale del café, corte del lado de las ventanas" loading="lazy"></div></div>
+      <figcaption>
+        <span class="mirar">Qué mirar: el azul oscuro se queda del lado izquierdo (sureste) y pasa a la derecha despacio.</span>
+        Abajo, la humedad que suelta el café durante 4 horas. Arriba, la misma salida pero con el aire de un día sin café: es solo un marcador de cómo lleva el aire las cosas, no es humedad. Arriba de la imagen se lee qué parte ha llegado a la mitad noroeste ("share in the NW half").
+      </figcaption>
+    </div>
+
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">La humedad se acumula entre las camas bajo el café, sale por el borde del café, sube hacia la Ventana E (donde se va una parte) y se reparte por el remolino sureste.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">La frontera entre los remolinos la frena: la mitad noroeste recibe menos humedad y más tarde, pero no está aislada.</p>
+        <p class="claim-more">A la hora llega cerca de una cuarta parte; con el tiempo, cerca del 40 %. Si se repartiera parejo, sería la mitad.</p>
+      </li>
+    </ul>
+    <div class="chart" data-grafico="modelo-humedad-no"></div>
+    <p class="prose">En la realidad el sol se mueve y las condiciones cambian más rápido que las horas que el modelo necesita para estabilizarse, así que la nave real probablemente queda entre la foto de 1 hora y la de 4 horas.</p>
+  </section>
+
+  <section id="rincon">
+    <h2>En todo el ancho, y el rincón más quieto</h2>
+    <figure class="fig fig--wide">
+      <div class="fig-frame"><img src="assets/fig/modelo/slices_comparison.png" alt="Seis paneles: velocidad del aire y líneas de flujo en los tres cortes, sin y con café" loading="lazy"></div>
+      <figcaption>
+        <span class="mirar">Qué mirar: los dos remolinos aparecen en las seis imágenes. Y abajo a la derecha (lado ventanas, con café) hay más contorno rojo entre las camas de café.</span>
+        Filas: lado puertas, centro, lado ventanas. Columnas: sin café, con café. Azul más oscuro = aire más rápido; contorno rojo = aire casi quieto; verde = café. En el lado de las puertas no hay café en el corte.
+      </figcaption>
+    </figure>
+
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">Los dos remolinos aparecen en todo el ancho de la nave, no solo en el centro.</p>
+        <p class="claim-more">El corte del lado de las puertas es el menos estable: con algunos supuestos se forman 3 o 4 remolinos.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">En días de café, el extremo sureste se frena en todo el ancho, y más del lado de las ventanas.</p>
+        <p class="claim-more">Incluso en el corte de las puertas, donde no hay café, se frena por la temperatura distinta de esos días.</p>
+      </li>
+      <li class="claim">
+        <span class="sello sello--sugestivo">Sugestivo <span class="q">· en el modelo</span></span>
+        <p class="claim-text">El lugar más quieto y húmedo es el lado de las ventanas en el extremo sureste (zona B), donde estuvo la segunda área de café.</p>
+        <p class="claim-more">Ahí un tercio del aire entre las camas cubiertas está casi quieto, y la humedad sale más despacio que en el centro. Si el secado es más lento en algún sitio, este es el candidato, y es donde primero se probaría un cambio de ventilador o escotilla.</p>
+      </li>
+    </ul>
+    <div class="chart" data-grafico="modelo-cortes"></div>
+  </section>
+
+  <section>
+    <h2>¿Coincide con lo que midieron los sensores?</h2>
+    <div class="cruce">
+      <div><span class="origen origen--sensores">Sensores</span><p>Con café húmedo, la humedad subió en casi toda la nave, menos en la línea 5, el extremo de la Ventana O.</p></div>
+      <div><span class="origen origen--modelo">Modelo</span><p>La humedad del café se queda sobre todo en el remolino sureste; a la mitad noroeste llega menos y más tarde.</p></div>
+      <p class="veredicto"><span class="sello sello--sugestivo">Coinciden</span> Las dos fuentes, trabajadas por separado, apuntan a lo mismo. Es una buena señal, pero no una comprobación: el modelo no se ajustó a los sensores, y los sensores no miden el aire entre ellos.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Qué tan confiable es</h2>
+    <p class="prose">Cada supuesto del modelo (qué tanto frenan las camas y el café, cuánto aire cambian las ventanas, cómo se rellenan las temperaturas entre sensores, el tamaño de la grilla) se cambió uno por uno, hacia arriba y hacia abajo: 20 variantes por corte, con y sin café.</p>
+    <div class="tabla-wrap prose"><table>
+      <thead><tr><th>Resultado</th><th>Al cambiar los supuestos</th><th>Veredicto</th></tr></thead>
+      <tbody>
+        <tr><td>Dos grandes remolinos</td><td>2 remolinos en 36 de 40 corridas</td><td><span class="sello sello--solido">Se sostiene</span></td></tr>
+        <tr><td>Dónde se dividen, con café</td><td>8,1 a 8,7 m</td><td><span class="sello sello--solido">Se sostiene</span></td></tr>
+        <tr><td>Dónde se dividen, sin café</td><td>9,3 a 10,6 m</td><td><span class="sello sello--solido">Se sostiene</span></td></tr>
+        <tr><td>El café corre la división hacia el sureste</td><td>0,9 a 2,3 m, en todas las variantes</td><td><span class="sello sello--solido">Se sostiene</span></td></tr>
+        <tr><td>Frenado del tercio sureste con café</td><td>26 % a 61 %</td><td><span class="sello sello--solido">Se sostiene</span> <span class="sello sello--sugestivo">tamaño incierto</span></td></tr>
+        <tr><td>Humedad en la mitad noroeste a la hora</td><td>15 % a 25 % (parejo sería 50 %)</td><td><span class="sello sello--solido">Se sostiene</span></td></tr>
+        <tr><td>Velocidades en cm/s</td><td>3,6 a 7,1 cm/s</td><td><span class="sello sello--sinrespaldo">Incierto, hasta ×2</span></td></tr>
+      </tbody>
+    </table></div>
+    <h3>Límites que hay que tener presentes</h3>
+    <ul class="prose">
+      <li><b>Es una rebanada, no la nave entera.</b> No hay aire que cruce entre rebanadas, ni sol en las paredes de los lados; las puertas y ventanas entran solo como zonas de intercambio.</li>
+      <li><b>La temperatura está fija.</b> En la realidad el aire movería el calor y debilitaría su propio impulso. Por eso las velocidades probablemente están exageradas; la forma de los remolinos es más confiable.</li>
+      <li><b>No hay sensores debajo de 1,1 m ni encima de 2,2 m.</b> Ahí la temperatura se rellena con la del sensor más cercano, y cerca de un tercio de la fuerza del flujo depende de ese relleno.</li>
+      <li><b>La humedad del modelo es un marcador</b>, no humedad real: no hay evaporación ni humedad relativa. Solo vale el patrón y las proporciones.</li>
+    </ul>
+  </section>
+
+  <details class="tecnico">
+    <summary>Detalle técnico <span class="sub">montaje, verificación, mapas completos</span></summary>
+    <div class="body">
+      <div class="tabla-wrap"><table>
+        <thead><tr><th>Elemento</th><th>Cómo se representa</th></tr></thead>
+        <tbody>
+          <tr><td>Corte</td><td>Plano vertical a x = 2,2 m (más x = 0,70 y 3,55 m), 17 m × 2,525 m (techo plano en ese corte), 512 × 76 celdas de 3,3 cm</td></tr>
+          <tr><td>Temperatura</td><td>Fija; interpolada de los promedios de los 15 sensores a las 11:00 (relativos a la mediana). Sin café = días sin café; con café = 25 ago – 7 sep</td></tr>
+          <tr><td>Motor del flujo</td><td>Solo flotabilidad (Boussinesq), sin ventiladores</td></tr>
+          <tr><td>Camas</td><td>Tres capas porosas delgadas a 0,55 / 0,90 / 1,40 m; frenan más el flujo vertical (2 s⁻¹) que el horizontal (0,5 s⁻¹)</td></tr>
+          <tr><td>Café</td><td>Capa de ~2 cm en cada cama, 3,4 m² por cama, y = 0,87–3,13 m; franja porosa densa (50 s⁻¹) que suelta humedad por igual en cada capa</td></tr>
+          <tr><td>Ventanas</td><td>Intercambian humedad con el aire de afuera (0,005 s⁻¹, estimación de ventilación por un solo lado). Puertas cerradas</td></tr>
+          <tr><td>Turbulencia</td><td>Viscosidad de fondo 2×10⁻⁴ m²/s + modelo de Smagorinsky de AeroJAX</td></tr>
+        </tbody>
+      </table></div>
+      <p><b>Verificaciones del solver.</b> Temperatura uniforme → el aire queda quieto. Solo estratificación caliente arriba → sin flujo falso (~10⁻⁹ m/s). Una mitad caliente → una sola celda girando hacia el lado correcto. Masa conservada hasta el redondeo. El flujo se estabiliza en ~5 minutos simulados; la humedad se corre 4 horas. Malla convergida en 512 celdas (1024 cambia las velocidades +2,5 %); a 1024 llega un poco menos humedad al noroeste (20 % contra 23 %), así que la mitad noroeste real probablemente está algo <i>más</i> separada de lo que muestra el modelo.</p>
+      <p><b>Por qué se frena.</b> Corridas cruzadas, velocidad media del tercio SE: temperaturas sin café y sin bloque 5,9 cm/s; con el bloque de café 5,2 (−11 %); temperaturas de días de café sin bloque 4,3 (−27 %); ambas 3,7 (−37 %).</p>
+      <p><b>Herramientas.</b> Solver 2D propio en JAX; de AeroJAX solo se usa el modelo de turbulencia. Fuente: <code>docs/track_b_coffee_map_findings.md</code>.</p>
+      <figure class="fig">
+        <div class="fig-frame"><img src="assets/fig/modelo/domain_check.png" alt="Geometría del corte del modelo: camas, aberturas y sensores" loading="lazy"></div>
+        <figcaption><span class="mirar">Lo que ve el modelo en el corte del centro.</span>Las tres camas (líneas punteadas), las puertas (azul) y las ventanas (naranja) proyectadas desde las paredes de los lados, y los sensores más cercanos.</figcaption>
+      </figure>
+      <div class="tabs" style="margin-top:1.1rem">
+        <button aria-controls="m-con" aria-selected="true">Mapa con café</button>
+        <button aria-controls="m-sin">Mapa sin café</button>
+        <button aria-controls="m-dif">Diferencias</button>
+      </div>
+      <figure class="fig" id="m-con" role="tabpanel"><div class="fig-frame"><img src="assets/fig/modelo/coffee_map_coffee.png" alt="Mapa completo con café: temperatura, velocidad y humedad" loading="lazy"></div>
+        <figcaption><span class="mirar">Tres paneles: temperatura que se impone (arriba), velocidad con líneas de flujo (medio) y humedad del café a las 4 h (abajo).</span>El núcleo frío a 1,2 m en el centro es lo que hace bajar el aire ahí.</figcaption></figure>
+      <figure class="fig" id="m-sin" role="tabpanel" hidden><div class="fig-frame"><img src="assets/fig/modelo/coffee_map_no_coffee.png" alt="Mapa completo sin café: temperatura, velocidad y marcador" loading="lazy"></div>
+        <figcaption><span class="mirar">Los mismos paneles, sin café.</span>Abajo, el "marcador" sale del mismo sitio que el café pero no es humedad: muestra cómo reparte el aire.</figcaption></figure>
+      <figure class="fig" id="m-dif" role="tabpanel" hidden><div class="fig-frame"><img src="assets/fig/modelo/coffee_map_compare.png" alt="Diferencias entre con y sin café: temperatura, velocidad y zonas quietas" loading="lazy"></div>
+        <figcaption><span class="mirar">Con café menos sin café.</span>Arriba, el extremo SE más fresco y el NO más caliente en días de café. En el medio, azul = el aire va más lento con café. Abajo, zonas casi quietas: azul sin café, rosado con café, morado en ambos casos.</figcaption></figure>
+    </div>
+  </details>
+
+  <nav data-pager></nav>
+</main>
+<footer class="site-foot">Estudio de la marquesina de secado de café de Bellavista · datos del 21 de agosto al 12 de septiembre de 2026 · versión del 8 de octubre de 2026.</footer>
+</body>
+</html>

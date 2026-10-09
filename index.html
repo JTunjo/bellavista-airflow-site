@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aire y humedad · Marquesina Bellavista</title>
+<meta name="description" content="Cómo se mueven el aire y la humedad en la marquesina de secado de café de Bellavista: lo que midieron los sensores y lo que muestra el modelo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/graficos.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<header data-site-head></header>
+<main>
+
+  <div class="hero">
+    <h1>Cómo se mueven el aire y la humedad dentro de la marquesina</h1>
+    <p class="lede">Lo que aprendimos de 36 sensores entre el 21 de agosto y el 12 de septiembre de 2026, y de un modelo por computador del aire a las 11 de la mañana. Para decidir dónde poner el café y cómo manejar escotillas y ventiladores.</p>
+  </div>
+
+  <figure class="plano hero-plano" data-plano="cafe rincon division linea5 externos"
+    data-titulo="Plano de la marquesina con las cuatro zonas clave"
+    data-enlaces='{"cafe":{"href":"cafe-humedo.html","label":"A: dónde estuvo el café"},"rincon":{"href":"modelo.html#rincon","label":"B: el rincón más quieto"},"division":{"href":"modelo.html#remolinos","label":"C: donde se dividen los remolinos"},"linea5":{"href":"cafe-humedo.html#linea5","label":"D: el extremo de la Ventana O"}}'>
+    <figcaption>
+      <div class="leyenda-plano">
+        <span><b>A</b>&nbsp;<a href="cafe-humedo.html">Donde estuvo el café</a></span>
+        <span><b>B</b>&nbsp;<a href="modelo.html#rincon">El rincón más quieto (modelo)</a></span>
+        <span><b>C</b>&nbsp;<a href="modelo.html#remolinos">Donde se dividen los dos remolinos (modelo)</a></span>
+        <span><b>D</b>&nbsp;<a href="cafe-humedo.html#linea5">Extremo de la Ventana O: sin subida de humedad</a></span>
+        <span><i style="background:var(--ink)"></i>sensor</span>
+      </div>
+    </figcaption>
+  </figure>
+
+  <section class="loom" aria-label="Video resumen" data-loom="">
+    <div class="loom-empty"><div><strong>Video resumen</strong>Aquí irá el video de unos 7 minutos que recorre estos resultados.</div></div>
+  </section>
+
+  <section>
+    <h2>Lo principal</h2>
+    <ul class="claims">
+      <li class="claim">
+        <span class="sello sello--solido">Sólido</span>
+        <p class="claim-text">Con café húmedo en la nave, la humedad sube en casi toda la marquesina, no solo junto al café.</p>
+        <p class="claim-more">Junto al café subió unos 9 puntos; en casi todo el resto, hasta unos 9 metros de distancia, entre 2 y 4 puntos, sin bajar con la distancia.</p>
+        <a class="ir" href="cafe-humedo.html">Ver café húmedo →</a>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido</span>
+        <p class="claim-text">El extremo de la Ventana O (zona D) no mostró esa subida.</p>
+        <p class="claim-more">Es el mejor candidato a "zona más seca" mientras hay café húmedo. El modelo coincide: a esa mitad de la nave la humedad llega menos y más tarde.</p>
+        <a class="ir" href="cafe-humedo.html#linea5">Ver el detalle →</a>
+      </li>
+      <li class="claim">
+        <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
+        <p class="claim-text">El aire forma dos grandes remolinos que dividen la nave a unos 8 a 10 metros del extremo sureste (zona C).</p>
+        <p class="claim-more">La humedad del café se queda sobre todo en el remolino del lado sureste y pasa al otro lado despacio. No está aislado, pero recibe menos.</p>
+        <a class="ir" href="modelo.html#remolinos">Ver el modelo →</a>
+      </li>
+      <li class="claim">
+        <span class="sello sello--sugestivo">Sugestivo <span class="q">· en el modelo</span></span>
+        <p class="claim-text">El rincón más quieto y húmedo es el lado de las ventanas en el extremo sureste (zona B), justo donde estuvo una de las áreas de café.</p>
+        <p class="claim-more">Si el secado es más lento en algún sitio, el modelo apunta aquí. Es el primer lugar para probar un cambio de ventilador o escotilla.</p>
+        <a class="ir" href="modelo.html#rincon">Ver el rincón →</a>
+      </li>
+      <li class="claim">
+        <span class="sello sello--sugestivo">Sugestivo</span>
+        <p class="claim-text">Cada mañana, a las 7 y 8, el aire de la nave gana más agua que el de afuera, y de noche pierde más.</p>
+        <p class="claim-more">Una posible explicación es el rocío que se forma de noche en el techo y se evapora al amanecer. Es una hipótesis: el techo no tiene sensor.</p>
+        <a class="ir" href="humedad-diaria.html">Ver el ciclo diario →</a>
+      </li>
+      <li class="claim">
+        <span class="sello sello--confirmar">Por confirmar</span>
+        <p class="claim-text">Qué zonas se secan más rápido después de sacar el café.</p>
+        <p class="claim-more">La tendencia es a secarse en casi todas partes, pero con solo 5 días de datos después del retiro todavía no se puede afirmar.</p>
+        <a class="ir" href="proximos-pasos.html">Ver qué falta →</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cómo leer este sitio</h2>
+    <p class="prose">Cada afirmación lleva un sello que dice qué tan seguros estamos, y una etiqueta que dice de dónde viene.</p>
+    <div class="leyenda-sellos">
+      <div><span class="sello sello--solido">Sólido</span><span>Se sostiene con los datos que hay. Puede afinarse, pero no debería cambiar.</span></div>
+      <div><span class="sello sello--sugestivo">Sugestivo</span><span>Los datos apuntan en esa dirección, pero con pocos casos o sin una prueba que lo aísle.</span></div>
+      <div><span class="sello sello--hipotesis">Hipótesis</span><span>Una explicación que encaja con lo observado y que todavía no se ha medido directamente.</span></div>
+      <div><span class="sello sello--confirmar">Por confirmar</span><span>La dirección se ve, pero faltan datos para afirmarlo.</span></div>
+      <div><span class="sello sello--sinrespaldo">Aún sin respaldo</span><span>Los datos actuales no alcanzan para decir nada todavía.</span></div>
+      <div><span class="origen origen--sensores">Sensores</span><span>Medido en la marquesina real.</span></div>
+      <div><span class="origen origen--modelo">Modelo</span><span>Simulado por computador. Muestra patrones (dónde, hacia dónde), no números exactos.</span></div>
+    </div>
+    <p class="prose">Los números y el método están guardados en las cajas <b>"Detalle técnico"</b> de cada página, para quien quiera revisarlos.</p>
+  </section>
+
+  <section>
+    <h2>Recorrido</h2>
+    <ol class="recorrido">
+      <li><a href="la-nave.html"><strong>La nave</strong><span>Orientación, sensores y por dónde pega el sol.</span></a></li>
+      <li><a href="cafe-humedo.html"><strong>Café húmedo</strong><span>Hasta dónde llega la humedad del café.</span></a></li>
+      <li><a href="ventiladores.html"><strong>Pruebas de ventilador</strong><span>Qué se pudo leer de las 6 pruebas.</span></a></li>
+      <li><a href="humedad-diaria.html"><strong>Ciclo diario</strong><span>Cómo cambia el agua del aire hora por hora.</span></a></li>
+      <li><a href="modelo.html"><strong>El modelo</strong><span>Los dos remolinos y a dónde va la humedad.</span></a></li>
+      <li><a href="finca.html"><strong>Para la finca</strong><span>Qué significa todo esto en la práctica.</span></a></li>
+      <li><a href="proximos-pasos.html"><strong>Próximos pasos</strong><span>Qué pruebas resolverían lo pendiente.</span></a></li>
+      <li><a href="como-se-hizo.html"><strong>Cómo se hizo</strong><span>Datos, métodos y límites.</span></a></li>
+    </ol>
+  </section>
+
+  <nav data-pager></nav>
+</main>
+<footer class="site-foot">Estudio de la marquesina de secado de café de Bellavista · datos del 21 de agosto al 12 de septiembre de 2026 · versión del 8 de octubre de 2026.</footer>
+</body>
+</html>
