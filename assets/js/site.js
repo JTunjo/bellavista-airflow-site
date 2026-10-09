@@ -251,6 +251,7 @@
       const url = (el.dataset.loom || "").trim();
       if (!url) return;
       const embed = url.replace("/share/", "/embed/");
+      el.hidden = false;
       el.innerHTML = `<div class="loom-frame"><iframe src="${embed}" allowfullscreen title="Video resumen"></iframe></div>`;
     });
   }

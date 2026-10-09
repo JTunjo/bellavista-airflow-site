@@ -389,3 +389,4 @@ dialog.visor::backdrop { background: rgb(18 24 21 / 0.96); }
 .claim > .inferencia { justify-self: start; }
 
 .site-nav li, .claims > li, .recorrido > li, .exp > li { margin-top: 0; }
+.leyenda-sellos .inferencia { justify-self: start; }
