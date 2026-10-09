@@ -26,22 +26,22 @@ because every scientific figure is a light PNG.
 
 | Item | Value |
 |---|---|
-| Brand / farm name exactly as it should appear | ▢ |
-| Short name for tight spaces (header on phones) | ▢ |
-| Tagline under the name in the header (current: "Aire y humedad en el secado de café") | ▢ |
-| How the shed is called on the farm (current: "marquesina"; also "nave") | ▢ |
-| Footer text: credits, who did the study, contact, year | ▢ |
-| Links to include in the footer (website, Instagram, etc.) | ▢ |
+| Brand / farm name exactly as it should appear | **Bellavista Coffee \| Área de secado** |
+| Short name for tight spaces (header on phones) | Bellavista Coffee |
+| Tagline under the name in the header (current: "Aire y humedad en el secado de café") | keep |
+| How the shed is called on the farm (current: "marquesina"; also "nave") | **marquesina** (never "nave") |
+| Footer text: credits, who did the study, contact, year | Tunjo Smart Solutions · jchacon@tunjosolutions.co · 2026 |
+| Links to include in the footer (website, Instagram, etc.) | https://co.linkedin.com/company/tunjosolutions (only) |
 
 **Logo files.** Put them in `assets/marca/`. SVG is preferred; otherwise PNG at least 1000 px wide,
 with a transparent background.
 
 | File | Use | Provided? |
 |---|---|---|
-| `assets/marca/logo.svg` | header, full color, on a light background | ▢ |
-| `assets/marca/logo-mono.svg` | single color (for small sizes or over photos) | ▢ |
-| `assets/marca/isotipo.svg` | symbol only, square (favicon, phone header) | ▢ |
-| Minimum size or clear-space rules | | ▢ |
+| `assets/marca/logo.svg` | header, full color, on a light background | n/a — the symbol is used instead |
+| `assets/marca/logo-mono.svg` | single color (for small sizes or over photos) | n/a |
+| `assets/marca/isotipo.svg` | symbol only, square (favicon, phone header) | ✔ Tunjo face (`#216F96` / `#002C51`), used in header, footer and favicon |
+| Minimum size or clear-space rules | | n/a |
 
 ## 2. Colors
 
@@ -99,7 +99,7 @@ that allows web use. They must support Spanish characters (á é í ó ú ñ ¿ 
 | Item | Value |
 |---|---|
 | Photo treatment (natural / warm grade / desaturated / duotone with brand color) | Natural, bright and clean: slightly lifted exposure, neutral-to-cool white balance, no heavy filters, no duotone. Tight, uncluttered crops. 8 px radius like cards. |
-| Can photos have people in them? Do we have their consent? | ▢ |
+| Can photos have people in them? Do we have their consent? | Yes — consent confirmed for all pictures |
 | Icon style if any (line / filled / hand-drawn) | Line icons, 1.5–2 px stroke, rounded caps and joins, 20–24 px, colored `--ink-2` or `--air`. Suggested set: Lucide (ISC license, free). |
 | Illustrations or brand graphics to reuse (files in `assets/marca/`) | decide — Stripe-style approach: no decorative illustrations; let the plan, charts and photos carry the page. |
 
@@ -109,10 +109,10 @@ Photo slots and sizes are in `design/fotos.md`.
 
 | Item | Value |
 |---|---|
-| Address the reader as *usted*, *tú*, or impersonal (current: impersonal / *usted*) | ▢ |
-| Farm vocabulary to use (e.g. "beneficiadero", "camas", "escotillas", "café pergamino") | ▢ |
-| Words or tones to avoid | ▢ |
-| Example of a sentence that "sounds like Tunjo" | ▢ |
+| Address the reader as *usted*, *tú*, or impersonal (current: impersonal / *usted*) | **tú** |
+| Farm vocabulary to use (e.g. "beneficiadero", "camas", "escotillas", "café pergamino") | **marquesina**, **camas**, **ventanas**, **pergamino** |
+| Words or tones to avoid | "nave", "escotillas" |
+| Example of a sentence that "sounds like Tunjo" | n/a |
 
 ## 7. References
 
@@ -120,8 +120,7 @@ Links or screenshots of existing Tunjo materials: website, packaging, labels, so
 presentations. Drop images in `design/referencias/`.
 
 - Style reference for sections 2–5: https://stripe.com (look and feel only; no assets copied)
-- ▢
-- ▢
+- Tunjo on LinkedIn: https://co.linkedin.com/company/tunjosolutions
 
 ## 8. What stays fixed
 

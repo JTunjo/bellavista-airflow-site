@@ -1,4 +1,4 @@
-# Marquesina Bellavista: aire y humedad
+# Bellavista Coffee · Área de secado: aire y humedad
 
 Sitio estático (HTML + CSS + JS, sin paso de build) que presenta los resultados del estudio
 de aire y humedad de la marquesina de secado de café. Pensado para GitHub Pages.

@@ -17,13 +17,13 @@
       filas: [
         { etiqueta: "Junto al café, centro del ancho", v: 8.8 },
         { etiqueta: "Junto al café, lado ventanas", v: 9.4 },
-        { etiqueta: "Resto de la nave, hasta ~9 m", rango: [2, 4], tip: "Casi todos los sensores: entre +2 y +4 puntos, sin bajar con la distancia" },
+        { etiqueta: "Resto de la marquesina, hasta ~9 m", rango: [2, 4], tip: "Casi todos los sensores: entre +2 y +4 puntos, sin bajar con la distancia" },
         { etiqueta: "Línea 5, extremo Ventana O", v: 0, textoValor: "0 · es la referencia", tip: "Es la referencia: los demás se miden contra ella, así que su valor es 0 por definición" },
       ],
       tabla: t(["Sitio", "Subida (puntos de HR)"], [
         ["Junto al café, centro del ancho (sensor 303)", "+8,8"],
         ["Junto al café, lado ventanas (sensor 305)", "+9,4"],
-        ["Resto de la nave, hasta ~9 m del café", "+2 a +4"],
+        ["Resto de la marquesina, hasta ~9 m del café", "+2 a +4"],
         ["Línea 5, extremo Ventana O (referencia)", "0"],
       ]),
     },
@@ -33,7 +33,7 @@
       titulo: "Cuánta agua gana o pierde el aire en una hora",
       sub: "Gramos de agua por metro cúbico, ganados (+) o perdidos (−) en esa hora del día. Promedio de todos los días.",
       unidad: "g/m³ en esa hora",
-      series: [{ k: "in", nombre: "Adentro de la nave", color: AZUL }, { k: "out", nombre: "Afuera", color: GRIS }],
+      series: [{ k: "in", nombre: "Adentro de la marquesina", color: AZUL }, { k: "out", nombre: "Afuera", color: GRIS }],
       dominio: [-0.4, 1.4], ticks: [-0.4, 0, 0.4, 0.8, 1.2], decTicks: 1, dec: 2, signo: true, anchoEtiqueta: 150,
       filas: [
         { etiqueta: "7 de la mañana", valores: { in: 1.23, out: 0.65 } },
@@ -56,7 +56,7 @@
         { etiqueta: "Adentro", v: -1.19 },
         { etiqueta: "Afuera", v: 0.17 },
       ],
-      tabla: t(["", "Total de la noche (g/m³)"], [["Adentro", "−1,19"], ["Afuera", "+0,17"], ["Diferencia propia de la nave", "−1,35"]]),
+      tabla: t(["", "Total de la noche (g/m³)"], [["Adentro", "−1,19"], ["Afuera", "+0,17"], ["Diferencia propia de la marquesina", "−1,35"]]),
     },
 
     // docs/track_b_coffee_map_findings.md §3
@@ -81,7 +81,7 @@
     "modelo-humedad-no": {
       tipo: "lineas",
       titulo: "Qué parte de la humedad del café llega a la mitad noroeste",
-      sub: "Porcentaje del total que está en la mitad NO de la nave, horas después de empezar a salir del café. Corte del centro del ancho.",
+      sub: "Porcentaje del total que está en la mitad NO de la marquesina, horas después de empezar a salir del café. Corte del centro del ancho.",
       dominioX: [0, 250], dominioY: [0, 55],
       ticksX: [{ v: 15, l: "15 min" }, { v: 60, l: "1 h" }, { v: 120, l: "2 h" }, { v: 240, l: "4 h" }],
       ticksY: [0, 10, 20, 30, 40, 50],

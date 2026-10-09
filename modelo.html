@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>El modelo · Marquesina Bellavista</title>
+<title>El modelo · Bellavista Coffee</title>
+<link rel="icon" href="assets/marca/isotipo.svg" type="image/svg+xml">
 <meta name="description" content="Simulación por computador del aire de la marquesina a las 11:00, con y sin café húmedo: dos remolinos, zonas quietas y a dónde va la humedad.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +33,7 @@
 
   <section class="prose">
     <h2>Qué es y qué no es este modelo</h2>
-    <p>Simula una <b>rebanada vertical</b> de la nave a lo largo (17 m de largo por la altura), como si se cortara de punta a punta. Se hicieron tres rebanadas: cerca de las puertas, en el centro y cerca de las ventanas.</p>
+    <p>Simula una <b>rebanada vertical</b> de la marquesina a lo largo (17 m de largo por la altura), como si se cortara de punta a punta. Se hicieron tres rebanadas: cerca de las puertas, en el centro y cerca de las ventanas.</p>
     <ul>
       <li>Representa las <b>11 de la mañana</b>, con las <b>ventanas abiertas y las puertas cerradas</b>, sin ventiladores. Lo único que mueve el aire es que el aire caliente sube y el frío baja.</li>
       <li>Las temperaturas no se inventan: se toman de lo que marcan los sensores a esa hora, en días con café y en días sin café.</li>
@@ -42,7 +43,7 @@
   </section>
 
   <section id="remolinos">
-    <h2>Dos remolinos que dividen la nave</h2>
+    <h2>Dos remolinos que dividen la marquesina</h2>
     <div class="fig fig--wide">
       <div class="tabs">
         <button aria-controls="p-centro" aria-selected="true">Centro del ancho</button>
@@ -53,7 +54,7 @@
       <div id="p-ne" role="tabpanel" hidden><div class="fig-frame"><video src="assets/fig/modelo/anim_particles_x070.mp4" poster="assets/fig/modelo/anim_particles_x070.jpg" muted loop playsinline controls preload="none" aria-label="Animación de partículas, corte del lado de las puertas"></video></div></div>
       <div id="p-so" role="tabpanel" hidden><div class="fig-frame"><video src="assets/fig/modelo/anim_particles_x355.mp4" poster="assets/fig/modelo/anim_particles_x355.jpg" muted loop playsinline controls preload="none" aria-label="Animación de partículas, corte del lado de las ventanas"></video></div></div>
       <figcaption>
-        <span class="mirar">Qué mirar: los puntos giran en dos grandes ruedas, una a cada lado de la mitad de la nave.</span>
+        <span class="mirar">Qué mirar: los puntos giran en dos grandes ruedas, una a cada lado de la mitad de la marquesina.</span>
         Arriba sin café, abajo con café. Los puntos más oscuros van más rápido. El rectángulo verde de la izquierda es el café sobre las tres camas; las barras naranjas arriba son las ventanas. Fíjese que con café la rueda de la izquierda (sureste) gira más despacio. Son 12 minutos de movimiento del aire.
         <span class="en">Rótulos en inglés: "WITH/WITHOUT coffee" = con/sin café, "speed" = velocidad.</span>
       </figcaption>
@@ -63,7 +64,7 @@
       <li class="claim">
         <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
         <p class="claim-text">El aire forma dos grandes remolinos que giran en sentidos opuestos y se dividen a unos 8 a 10 metros del extremo sureste.</p>
-        <p class="claim-more">Pasa en los tres cortes, con y sin café. El aire fresco baja por el centro de la nave y el caliente sube cerca de los extremos.</p>
+        <p class="claim-more">Pasa en los tres cortes, con y sin café. El aire fresco baja por el centro de la marquesina y el caliente sube cerca de los extremos.</p>
       </li>
       <li class="claim">
         <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
@@ -106,7 +107,7 @@
         <button aria-controls="h-centro" aria-selected="true">Centro del ancho</button>
         <button aria-controls="h-so">Lado ventanas</button>
       </div>
-      <div id="h-centro" role="tabpanel"><div class="fig-frame"><img src="assets/fig/modelo/anim_moisture_4h.gif" alt="Animación de 4 horas: la humedad sale del café y se reparte por la nave, corte del centro" loading="lazy"></div></div>
+      <div id="h-centro" role="tabpanel"><div class="fig-frame"><img src="assets/fig/modelo/anim_moisture_4h.gif" alt="Animación de 4 horas: la humedad sale del café y se reparte por la marquesina, corte del centro" loading="lazy"></div></div>
       <div id="h-so" role="tabpanel" hidden><div class="fig-frame"><img src="assets/fig/modelo/anim_moisture_4h_x355.gif" alt="Animación de 4 horas: la humedad sale del café, corte del lado de las ventanas" loading="lazy"></div></div>
       <figcaption>
         <span class="mirar">Qué mirar: el azul oscuro se queda del lado izquierdo (sureste) y pasa a la derecha despacio.</span>
@@ -126,7 +127,7 @@
       </li>
     </ul>
     <div class="chart" data-grafico="modelo-humedad-no"></div>
-    <p class="prose">En la realidad el sol se mueve y las condiciones cambian más rápido que las horas que el modelo necesita para estabilizarse, así que la nave real probablemente queda entre la foto de 1 hora y la de 4 horas.</p>
+    <p class="prose">En la realidad el sol se mueve y las condiciones cambian más rápido que las horas que el modelo necesita para estabilizarse, así que la marquesina real probablemente queda entre la foto de 1 hora y la de 4 horas.</p>
   </section>
 
   <section id="rincon">
@@ -142,7 +143,7 @@
     <ul class="claims">
       <li class="claim">
         <span class="sello sello--solido">Sólido <span class="q">· en el modelo</span></span>
-        <p class="claim-text">Los dos remolinos aparecen en todo el ancho de la nave, no solo en el centro.</p>
+        <p class="claim-text">Los dos remolinos aparecen en todo el ancho de la marquesina, no solo en el centro.</p>
         <p class="claim-more">El corte del lado de las puertas es el menos estable: con algunos supuestos se forman 3 o 4 remolinos.</p>
       </li>
       <li class="claim">
@@ -162,7 +163,7 @@
   <section>
     <h2>¿Coincide con lo que midieron los sensores?</h2>
     <div class="cruce">
-      <div><span class="origen origen--sensores">Sensores</span><p>Con café húmedo, casi toda la nave subió 2 a 9 puntos más que la línea 5, el extremo de la Ventana O.</p></div>
+      <div><span class="origen origen--sensores">Sensores</span><p>Con café húmedo, casi toda la marquesina subió 2 a 9 puntos más que la línea 5, el extremo de la Ventana O.</p></div>
       <div><span class="origen origen--modelo">Modelo</span><p>La humedad del café se queda sobre todo en el remolino sureste; a la mitad noroeste llega menos y más tarde.</p></div>
       <p class="veredicto"><span class="sello sello--sugestivo">Coinciden</span> Las dos fuentes, trabajadas por separado, apuntan a lo mismo. Es una buena señal, pero no una comprobación: el modelo no se ajustó a los sensores, y los sensores no miden el aire entre ellos.</p>
     </div>
@@ -185,7 +186,7 @@
     </table></div>
     <h3>Límites que hay que tener presentes</h3>
     <ul class="prose">
-      <li><b>Es una rebanada, no la nave entera.</b> No hay aire que cruce entre rebanadas, ni sol en las paredes de los lados; las puertas y ventanas entran solo como zonas de intercambio.</li>
+      <li><b>Es una rebanada, no la marquesina entera.</b> No hay aire que cruce entre rebanadas, ni sol en las paredes de los lados; las puertas y ventanas entran solo como zonas de intercambio.</li>
       <li><b>La temperatura está fija.</b> En la realidad el aire movería el calor y debilitaría su propio impulso. Por eso las velocidades probablemente están exageradas; la forma de los remolinos es más confiable.</li>
       <li><b>No hay sensores debajo de 1,1 m ni encima de 2,2 m.</b> Ahí la temperatura se rellena con la del sensor más cercano, y cerca de un tercio de la fuerza del flujo depende de ese relleno.</li>
       <li><b>La humedad del modelo es un marcador</b>, no humedad real: no hay evaporación ni humedad relativa. Solo vale el patrón y las proporciones.</li>
@@ -218,7 +219,7 @@
         <div class="fig-frame"><img src="assets/fig/modelo/sensitivity_summary.png" alt="Resultado de cambiar cada supuesto del modelo, uno a la vez" loading="lazy"></div>
         <figcaption>
           <span class="mirar">Cada fila es un supuesto cambiado; la línea vertical negra es el resultado base.</span>
-          Los cuatro paneles de arriba: dónde se dividen los remolinos (casi no se mueve), cuánto frena el café (varía, pero siempre frena), qué parte de la humedad llega al noroeste en 1 hora (siempre lejos del 50 %) y la velocidad (la más incierta). Abajo, la forma de los remolinos a lo largo de la nave en todas las variantes: casi iguales.
+          Los cuatro paneles de arriba: dónde se dividen los remolinos (casi no se mueve), cuánto frena el café (varía, pero siempre frena), qué parte de la humedad llega al noroeste en 1 hora (siempre lejos del 50 %) y la velocidad (la más incierta). Abajo, la forma de los remolinos a lo largo de la marquesina en todas las variantes: casi iguales.
           <span class="en">Rótulos en inglés: "bed drag" = freno de las camas, "coffee footprint" = área del café, "window exchange" = intercambio por ventanas, "T interp" = cómo se rellenan las temperaturas, "grid" = grilla.</span>
         </figcaption>
       </figure>
@@ -238,6 +239,9 @@
 
   <nav data-pager></nav>
 </main>
-<footer class="site-foot">Estudio de la marquesina de secado de café de Bellavista · datos del 21 de agosto al 12 de septiembre de 2026 · versión del 8 de octubre de 2026.</footer>
+<footer class="site-foot">
+  <p>Estudio del área de secado de Bellavista Coffee · datos del 21 de agosto al 12 de septiembre de 2026.</p>
+  <p class="credito"><img src="assets/marca/isotipo.svg" alt="" width="18" height="21"> © 2026 Tunjo Smart Solutions · <a href="mailto:jchacon@tunjosolutions.co">jchacon@tunjosolutions.co</a> · <a href="https://co.linkedin.com/company/tunjosolutions" rel="noopener">LinkedIn</a></p>
+</footer>
 </body>
 </html>

@@ -22,8 +22,8 @@
 | File name | Page | What to shoot |
 |---|---|---|
 | `banner-inicio.jpg` | Inicio, above the title | The marquesina from outside, with the farm or landscape around it. Golden hour if possible. |
-| `banner-nave.jpg` | La nave | Inside, looking down the 17 m length: the beds on three levels, the plastic walls, the roof. |
-| `banner-finca.jpg` | Para la finca | Coffee being handled: drying, raking, bagging. People are optional (see consent in tema.md). |
+| `banner-marquesina.jpg` | La marquesina | Inside, looking down the 17 m length: the camas on three levels, the plastic walls, the roof. |
+| `banner-finca.jpg` | Para la finca | Coffee being handled: drying, raking, bagging. People are welcome (consent confirmed). |
 
 ## Inline photos (5): inside the text, next to the related finding
 
@@ -32,11 +32,11 @@
 
 | File name | Page, next to | What to shoot |
 |---|---|---|
-| `cafe-camas.jpg` | Café húmedo, top | The wet coffee spread on the beds (the ~2 cm layer), ideally showing two or three levels. |
+| `cafe-camas.jpg` | Café húmedo, top | The wet pergamino spread on the camas (the ~2 cm layer), ideally showing two or three levels. |
 | `ventilador.jpg` | Pruebas de ventilador, top | The fan + nebulizer setup used in the August tests, or where it was placed. |
-| `sensor.jpg` | La nave, the "what to know" list | A close-up of one of the sensors as mounted, so readers see what "a sensor" is. |
+| `sensor.jpg` | La marquesina, the "what to know" list | A close-up of one of the sensors as mounted, so readers see what "a sensor" is. |
 | `ventanas-techo.jpg` | Ciclo diario, near the roof-condensation hypothesis | The SW wall with the high windows and the underside of the roof. Morning dew on the roof would be ideal. |
-| `puertas.jpg` | La nave, near the floor plan | The NE wall with the two doors, from inside or outside. |
+| `puertas.jpg` | La marquesina, near the floor plan | The NE wall with the two doors, from inside or outside. |
 
 ## For each photo, also send
 

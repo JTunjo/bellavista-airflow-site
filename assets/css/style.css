@@ -65,14 +65,19 @@ a:hover { text-decoration-thickness: 2px; }
   border-image-slice: 1 0 0 0;
 }
 .site-head .inner {
-  max-width: var(--wide); margin: 0 auto; padding: 0.6rem 1rem;
+  max-width: 1200px; margin: 0 auto; padding: 0.6rem 1rem;
   display: flex; align-items: center; gap: 1rem;
 }
 .brand {
   font: 600 1.02rem/1.1 var(--f-display); color: var(--ink); text-decoration: none;
   letter-spacing: -0.01em; white-space: nowrap;
 }
+.brand { display: flex; align-items: center; gap: 0.6rem; }
+.brand img { flex: none; width: 30px; height: auto; }
+.brand-sep { font-style: normal; color: var(--line); font-weight: 400; }
+.brand-area { font-weight: 500; color: var(--ink-2); }
 .brand small { display: block; font: 400 0.75rem/1.2 var(--f-body); color: var(--muted); letter-spacing: 0; }
+@media (max-width: 640px) { .brand-sep, .brand-area { display: none; } }
 .nav-toggle {
   margin-left: auto; display: none;
   font: 600 0.9rem var(--f-body); background: var(--paper); color: var(--ink);
@@ -86,7 +91,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .site-nav a:hover { background: var(--paper); color: var(--ink); box-shadow: var(--sh-1); }
 .site-nav a[aria-current="page"] { background: var(--accent); color: #fff; }
-@media (max-width: 1180px) {
+@media (max-width: 1220px) {
   .nav-toggle { display: inline-block; }
   .site-nav { display: none; position: absolute; left: 0; right: 0; top: 100%;
     background: var(--bg); border-bottom: 1px solid var(--line); padding: 0.5rem 1rem 1rem; }
@@ -359,6 +364,10 @@ td.n, th.n { text-align: right; font-family: var(--f-mono); white-space: nowrap;
 .pager a span { font: 600 1.05rem var(--f-display); color: var(--ink); }
 .pager .next { text-align: right; margin-left: auto; }
 .site-foot { max-width: var(--wide); margin: 0 auto; padding: 1.5rem 1rem 3rem; font-size: 0.85rem; color: var(--muted); }
+.site-foot p { margin: 0 0 0.4rem; }
+.site-foot .credito { display: flex; align-items: center; flex-wrap: wrap; gap: 0.35rem; }
+.site-foot .credito img { width: 16px; height: auto; }
+.site-foot a { color: var(--ink-2); }
 
 /* visor ampliado */
 dialog.visor {

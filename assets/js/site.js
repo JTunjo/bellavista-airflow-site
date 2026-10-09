@@ -1,4 +1,4 @@
-/* Marquesina Bellavista — componentes compartidos (sin dependencias, sin paso de build).
+/* Bellavista Coffee · Área de secado — componentes compartidos (sin dependencias, sin paso de build).
    - menú y paginador (la lista PAGINAS es el único lugar donde se define el orden)
    - plano de la nave (SVG generado desde la geometría real de config.yaml / config.json)
    - visor ampliado de figuras, pestañas, videos, gráficos propios en español
@@ -8,7 +8,7 @@
 
   const PAGINAS = [
     { href: "index.html", titulo: "Inicio" },
-    { href: "la-nave.html", titulo: "La nave" },
+    { href: "la-nave.html", titulo: "La marquesina" },
     { href: "cafe-humedo.html", titulo: "Café húmedo" },
     { href: "ventiladores.html", titulo: "Pruebas de ventilador" },
     { href: "humedad-diaria.html", titulo: "Ciclo diario" },
@@ -28,7 +28,7 @@
       `<li><a href="${p.href}"${p.href === actual ? ' aria-current="page"' : ""}>${p.titulo}</a></li>`).join("");
     head.innerHTML = `
       <div class="inner">
-        <a class="brand" href="index.html">Marquesina Bellavista<small>Aire y humedad en el secado de café</small></a>
+        <a class="brand" href="index.html"><img src="assets/marca/isotipo.svg" alt="" width="30" height="35"><span>Bellavista Coffee<i class="brand-sep" aria-hidden="true"> | </i><span class="brand-area">Área de secado</span><small>Aire y humedad en el secado de café</small></span></a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menú</button>
         <nav class="site-nav" id="menu" aria-label="Secciones"><ol>${items}</ol></nav>
       </div>`;
