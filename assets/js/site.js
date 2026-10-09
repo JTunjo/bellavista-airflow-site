@@ -250,8 +250,13 @@
     document.querySelectorAll("[data-loom]").forEach(el => {
       const url = (el.dataset.loom || "").trim();
       if (!url) return;
-      const embed = url.replace("/share/", "/embed/");
       el.hidden = false;
+      if (/\.mp4$/i.test(url)) {
+        const poster = el.dataset.poster ? ` poster="${el.dataset.poster}"` : "";
+        el.innerHTML = `<div class="loom-frame"><video src="${url}"${poster} controls preload="metadata" playsinline title="Video resumen"></video></div>`;
+        return;
+      }
+      const embed = url.replace("/share/", "/embed/");
       el.innerHTML = `<div class="loom-frame"><iframe src="${embed}" allowfullscreen title="Video resumen"></iframe></div>`;
     });
   }
