@@ -11,3 +11,8 @@ de aire y humedad de la marquesina de secado de café. Pensado para GitHub Pages
 - Video resumen: poner la URL de Loom en el atributo `data-loom` de `index.html`.
 
 Ver localmente: `python3 -m http.server` en esta carpeta y abrir http://localhost:8000.
+
+## Fotos
+
+Los originales van en `fotos-originales/` (no se publica). `./fotos.sh` escribe las versiones para la
+web en `assets/fotos/`: banners a 2400 y 1200 px, fotos de texto a 1600 y 900 px.
