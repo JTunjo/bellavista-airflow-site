@@ -12,6 +12,9 @@
 - Landscape (horizontal).
 - Avoid heavy filters; color treatment is decided in `design/tema.md` §5.
 
+> **Subjects are only suggestions.** Any photo works as long as it meets the size; tell the builder
+> which page you'd like it on.
+
 ## Banners (3): wide strips at the top of a page
 
 - **Minimum size:** 2400 × 1000 px (12:5). A modern phone photo, held horizontally, is enough.
